@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Elements">
+      <UniqueIdentifier>{6a852db3-8c29-4c09-9c4b-6d2854b48624}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Elements">
+      <UniqueIdentifier>{419bc3d6-7a50-4ec5-b1ca-732bbe0f338e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Elements\PlayableCharacters">
+      <UniqueIdentifier>{a7e60c9c-2149-4e73-97b9-ef1456be95c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Elements\NonPlayableCharacters">
+      <UniqueIdentifier>{cfa454b5-1418-4d99-b475-afc266ec5e81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Elements\NonPlayableCharacters">
+      <UniqueIdentifier>{cf4d6560-825e-4ea7-8caa-c0ace70fe21a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Elements\PlayableCharacters">
+      <UniqueIdentifier>{c61f884f-2c20-440b-9c57-9f1a58a11da9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Anexes">
+      <UniqueIdentifier>{bc2135d5-4dd0-43e8-a4b1-666f6560c2f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anexes">
+      <UniqueIdentifier>{c894bedc-3ce5-4e40-b425-27f4986748ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\assets">
+      <UniqueIdentifier>{1945a993-8c09-43db-928d-e9fe72f799dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Static">
+      <UniqueIdentifier>{678072d3-b38b-4ea7-a6dd-909a0a1ddcb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Static">
+      <UniqueIdentifier>{add7bb6d-a420-409e-8ddb-9299db1f83e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\modifiables">
+      <UniqueIdentifier>{8b0202b1-3312-45b2-9d01-39d0f7a6478f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Anexes\Abstract">
+      <UniqueIdentifier>{760fbdf0-8b72-41a6-86ce-c8b71f2a1699}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Elements\Abstract">
+      <UniqueIdentifier>{bcfce582-bbc0-46fb-8006-a9d2c6825d9b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Engine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss.h">
+      <Filter>Header Files\Elements\PlayableCharacters</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rotation.h">
+      <Filter>Header Files\Static</Filter>
+    </ClInclude>
+    <ClInclude Include="MovementAnex.h">
+      <Filter>Header Files\Anexes</Filter>
+    </ClInclude>
+    <ClInclude Include="Anex.h">
+      <Filter>Header Files\Anexes\Abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="GameElement.h">
+      <Filter>Header Files\Elements\Abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Header Files\Elements\Abstract</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss.cpp">
+      <Filter>Source Files\Elements\PlayableCharacters</Filter>
+    </ClCompile>
+    <ClCompile Include="MovementAnex.cpp">
+      <Filter>Source Files\Anexes</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="gunchess_mafia.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\assets\blue_boss.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\assets\brown_boss.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\assets\green_boss.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\assets\orange_boss.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\assets\red_boss.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\assets\skin_boss.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\assets\white_boss.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
