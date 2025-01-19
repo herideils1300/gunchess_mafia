@@ -1,20 +1,23 @@
 #include "MovementAnex.h"
 #include <raylib.h>
-void MovementAnex::moveToNewPosi(Vector2* playerPosi, float speed) {
-	while (playerPosi->x != this->lastPosi.x && playerPosi->y != this->lastPosi.y)
-	{
-		playerPosi->x += (playerPosi->x - this->lastPosi.x);
-		playerPosi->y += (playerPosi->y - this->lastPosi.y) * GetFrameTime();
-	}
-}
 
 MovementAnex::MovementAnex()
 {
 	//Does the constructor stuff
 }
 
-void MovementAnex::execute(Character* element) {
-	this->moveToNewPosi(&((Vector2)element->getPosi()), 0.5f);
+void MovementAnex::moveToNewPosi(Character* character, float speed) {
+	Vector2 posi = character->getPosi();
+	while (posi.x != this->lastPosi.x && posi.y != this->lastPosi.y)
+	{
+		posi.x += (posi.x - this->lastPosi.x) * GetFrameTime();
+		posi.y += (posi.y - this->lastPosi.y) * GetFrameTime();
+	}
+	character->setPosi(posi);
+}
+
+void MovementAnex::execute(Character* character) {
+	this->moveToNewPosi(character, 0.5f);
 }
 
 

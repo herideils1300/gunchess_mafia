@@ -4,7 +4,7 @@
 class GameElement
 {
 protected:
-	std::vector<Anex*> anexes = std::vector<Anex*>();
+	std::vector<Anex*> anexes;
 public:
 	virtual void init(int winWidth, int winHeight) {};
 	virtual bool update() {};

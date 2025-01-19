@@ -3,6 +3,6 @@
 class Anex
 {
 public:
-	virtual void execute(Character* element){};
+	virtual void execute(Character* character) {};
 };
 

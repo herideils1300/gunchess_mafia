@@ -5,8 +5,9 @@ Engine::Engine(std::vector<GameElement*> elements){
 	this->elements = elements;
 	this->camera = Camera2D();
 }
-Engine::Engine() {
 
+Engine::Engine() {
+	this->camera = Camera2D();
 }
 
 void Engine::addElement(GameElement* element) {

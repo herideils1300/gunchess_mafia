@@ -1,8 +1,8 @@
 #include "Boss.h"
 #include <string>
 #include <iostream>
-#include "Controls.h"
 #include <vector>
+#include "Anex.h"
 #include "MovementAnex.h"
 
 Boss::Boss() {
