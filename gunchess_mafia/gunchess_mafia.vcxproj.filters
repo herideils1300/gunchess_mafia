@@ -55,6 +55,9 @@
     <Filter Include="Header Files\Elements\Abstract">
       <UniqueIdentifier>{bcfce582-bbc0-46fb-8006-a9d2c6825d9b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Anexes\Abstract">
+      <UniqueIdentifier>{a9da0de9-0d7c-434f-8aff-3b5f2e859d42}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -84,6 +87,15 @@
     <ClInclude Include="Character.h">
       <Filter>Header Files\Elements\Abstract</Filter>
     </ClInclude>
+    <ClInclude Include="TileMap.h">
+      <Filter>Header Files\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratingAnex.h">
+      <Filter>Header Files\Anexes</Filter>
+    </ClInclude>
+    <ClInclude Include="AnexType.h">
+      <Filter>Header Files\Static</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine.cpp">
@@ -97,6 +109,15 @@
     </ClCompile>
     <ClCompile Include="MovementAnex.cpp">
       <Filter>Source Files\Anexes</Filter>
+    </ClCompile>
+    <ClCompile Include="Anex.cpp">
+      <Filter>Source Files\Anexes\Abstract</Filter>
+    </ClCompile>
+    <ClCompile Include="TileMap.cpp">
+      <Filter>Source Files\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratingAnex.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

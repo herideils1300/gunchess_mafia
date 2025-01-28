@@ -7,11 +7,10 @@
 class Boss : public Character, public GameElement
 {
 private:
-	Rotation rotation = Rotation::Left;
 	Texture2D texture;
 public:
 	Boss();
-	void init(int winWidth, int winHeight) override;
+	void init() override;
 	bool update() override;
 	void draw() override;
 };

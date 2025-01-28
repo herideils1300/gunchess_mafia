@@ -8,7 +8,7 @@ private:
 	std::vector<GameElement*> elements;
 	Camera2D camera;
 	bool gameRunning = true;
-	void updateElements();
+	bool updateElements();
 	void drawElements();
 	void endGame();
 	void setup();

@@ -131,19 +131,25 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Anex.h" />
+    <ClInclude Include="AnexType.h" />
     <ClInclude Include="Boss.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="GameElement.h" />
     <ClInclude Include="Engine.h" />
+    <ClInclude Include="GeneratingAnex.h" />
     <ClInclude Include="MovementAnex.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Rotation.h" />
+    <ClInclude Include="TileMap.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Anex.cpp" />
     <ClCompile Include="Boss.cpp" />
     <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="GeneratingAnex.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MovementAnex.cpp" />
+    <ClCompile Include="TileMap.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="gunchess_mafia.rc" />

@@ -1,23 +1,39 @@
 #include "MovementAnex.h"
 #include <raylib.h>
+#include <math.h>
 
-MovementAnex::MovementAnex()
-{
-	//Does the constructor stuff
-}
-
-void MovementAnex::moveToNewPosi(Character* character, float speed) {
+bool MovementAnex::updateElementPosi(Character* character) {
 	Vector2 posi = character->getPosi();
-	while (posi.x != this->lastPosi.x && posi.y != this->lastPosi.y)
+	switch (GetKeyPressed())
 	{
-		posi.x += (posi.x - this->lastPosi.x) * GetFrameTime();
-		posi.y += (posi.y - this->lastPosi.y) * GetFrameTime();
+	case KEY_A:
+		posi.x--;
+		break;
+	case KEY_D:
+		posi.x++;
+		break;
+	case KEY_W:
+		posi.y--;
+		break;
+	case KEY_S:
+		posi.y++;
+		break;
+	case KEY_E:
+		character->rotateLeft();
+		break;
+	case KEY_Q:
+		character->rotateRight();
+		break;
+	default:
+		break;
 	}
 	character->setPosi(posi);
+
+	return true;
 }
 
-void MovementAnex::execute(Character* character) {
-	this->moveToNewPosi(character, 0.5f);
+bool MovementAnex::execute(Character* character) {
+	return updateElementPosi(character);
 }
 
 

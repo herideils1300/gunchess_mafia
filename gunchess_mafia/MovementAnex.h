@@ -1,13 +1,14 @@
 #pragma once
+#include "Anex.h"
 #include "Character.h"
+#include "Boss.h"
 #include <raylib.h>
 class MovementAnex : public Anex
 {
 private:
-	Vector2 lastPosi = Vector2{ 0,0 };
-	void moveToNewPosi(Character* playerPosi, float speed);
+	bool updateElementPosi(Character* character);
 public:
-	MovementAnex();
-	void execute(Character* character) override;
+	MovementAnex() {};
+	bool execute(Character* character) override;
 };
 

@@ -21,11 +21,15 @@ void Engine::addElement(std::vector<GameElement*> elements)
 	}
 }
 
-void Engine::updateElements()
+bool Engine::updateElements()
 {
+	bool finished = false;
+
 	for (GameElement* element : this->elements) {
-		element->update();
+		finished &= element->update();
 	}
+
+	return finished;
 }
 
 void Engine::drawElements() {

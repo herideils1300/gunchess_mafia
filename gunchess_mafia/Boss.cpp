@@ -8,7 +8,7 @@
 Boss::Boss() {
 }
 
-void Boss::init(int winWidth, int winHeight) {
+void Boss::init() {
 	this->texture = LoadTexture("../../assets/orange_boss.png");
 	this->anexes = std::vector<Anex*>{
 		new MovementAnex()
@@ -16,9 +16,12 @@ void Boss::init(int winWidth, int winHeight) {
 }
 
 bool Boss::update() {
+	bool complete = false;
 	for (Anex* anex : this->anexes) {
-		anex->execute(this);
+		complete &= anex->execute(this);
 	}
+
+	return complete;
 	/*switch (GetKeyPressed())
 	{
 	case KEY_A:
