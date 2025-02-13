@@ -1,5 +1,6 @@
 #pragma once
 #include "Character.h"
+#include "Map.h"
 #include "AnexType.h"
 class Anex
 {
@@ -9,8 +10,9 @@ protected:
 	bool locked = false;
 	void lock(int providedPriority);
 public:
-	Anex(AnexType type, int priorirty) { this->type = type; this->priority = priorirty; };
+	Anex() {};
+	Anex(AnexType type, int priority) { this->type = type; this->priority = priority; };
 	virtual bool execute(Character* character) { return true; };
-	virtual bool execute(GameElement* element) { return true; };
+	virtual bool execute(Map* character) { return true; };
 };
 

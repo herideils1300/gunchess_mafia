@@ -72,7 +72,7 @@ void Engine::setup() {
 	this->camera.zoom = 1.0f;
 	InitWindow(width, height, "Gunchess");
 	for (GameElement* a : this->elements) {
-		a->init(width, height);
+		a->init();
 	}
 }
 

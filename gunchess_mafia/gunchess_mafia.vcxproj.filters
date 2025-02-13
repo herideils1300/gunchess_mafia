@@ -58,14 +58,23 @@
     <Filter Include="Source Files\Anexes\Abstract">
       <UniqueIdentifier>{a9da0de9-0d7c-434f-8aff-3b5f2e859d42}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Engine">
+      <UniqueIdentifier>{dfe2992b-e191-410f-b7c8-da50e5636d85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine">
+      <UniqueIdentifier>{163322d6-1d0b-4005-81fb-8187e30d6667}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Structure">
+      <UniqueIdentifier>{32ed19d8-6f65-46b9-9ac4-d5d41de1d737}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Structure">
+      <UniqueIdentifier>{fda77406-9ba5-49dc-b2e6-1db175c3a65a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Engine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Boss.h">
       <Filter>Header Files\Elements\PlayableCharacters</Filter>
     </ClInclude>
@@ -96,11 +105,26 @@
     <ClInclude Include="AnexType.h">
       <Filter>Header Files\Static</Filter>
     </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Header Files\Elements\Abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="TileLayer.h">
+      <Filter>Header Files\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared.h">
+      <Filter>Header Files\Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Header Files\Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="Layer.h">
+      <Filter>Header Files\Structure</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Engine.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -117,7 +141,22 @@
       <Filter>Source Files\Elements</Filter>
     </ClCompile>
     <ClCompile Include="GeneratingAnex.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Anexes</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp">
+      <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="TileLayer.cpp">
+      <Filter>Source Files\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="Shared.cpp">
+      <Filter>Source Files\Structure</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Source Files\Structure</Filter>
+    </ClCompile>
+    <ClCompile Include="Layer.cpp">
+      <Filter>Source Files\Structure</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
