@@ -1,31 +1,17 @@
 #include "Engine.h"
 #include <raylib.h>
 
-Engine::Engine(std::vector<GameElement*> elements){
-	this->elements = elements;
-	this->camera = Camera2D();
+Engine::Engine(Scene* scene){
+	this->scene = scene;
 }
 
-Engine::Engine() {
-	this->camera = Camera2D();
-}
-
-void Engine::addElement(GameElement* element) {
-	this->elements.push_back(element);
-}
-
-void Engine::addElement(std::vector<GameElement*> elements)
-{
-	for (GameElement* e : elements) {
-		this->elements.push_back(e);
-	}
-}
+Engine::Engine() {}
 
 bool Engine::updateElements()
 {
 	bool finished = false;
 
-	for (GameElement* element : this->elements) {
+	for (GameElement* element : this->scene->bringAll()) {
 		finished &= element->update();
 	}
 

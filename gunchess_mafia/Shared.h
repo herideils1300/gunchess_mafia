@@ -11,6 +11,5 @@ private:
 public:
 	Shared* operator+(std::pair<const char*, std::any> tupleValue);
 	std::any getParam(const char* paramName);
-
 };
 
