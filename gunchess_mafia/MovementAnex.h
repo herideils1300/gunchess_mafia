@@ -9,6 +9,6 @@ private:
 	bool updateElementPosi(Character* character);
 public:
 	MovementAnex() {};
-	bool execute(Character* character) override;
+	int execute(Character* character) override;
 };
 

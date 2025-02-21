@@ -7,7 +7,8 @@ private:
 	bool dynamic = false;
 public:
 	Layer(std::vector<GameElement*> ges, bool dynamic);
-	void operator+(GameElement* element);
+	Layer(bool dynamic);
+	Layer* operator+=(GameElement* element);
 	std::vector<GameElement*> giveAllElements();
 };
 

@@ -8,11 +8,12 @@ protected:
 	int priority;
 	AnexType type;
 	bool locked = false;
+	bool canceled = false;
 	void lock(int providedPriority);
 public:
 	Anex() {};
 	Anex(AnexType type, int priority) { this->type = type; this->priority = priority; };
-	virtual bool execute(Character* character) { return true; };
-	virtual bool execute(Map* character) { return true; };
+	virtual int execute(Character* character) { return true; };
+	virtual int execute(Map* character) { return true; };
 };
 

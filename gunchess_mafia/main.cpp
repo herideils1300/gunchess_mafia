@@ -6,6 +6,8 @@
 #include "Scene.h"
 int main() {
 	//Redoing the main scene...
+	
+
 	std::vector<GameElement*> mapElements = std::vector<GameElement*>{
 		new TileMap()
 	};
@@ -14,10 +16,16 @@ int main() {
 		new Boss()
 	};
 
-	Layer mapLayer = Layer(mapElements, false);
-	Layer piecesLayer = Layer(piecesElements, true);
-	Scene scene = Scene();
-	
+	Layer* mapLayer = new Layer(false);
+	Layer* piecesLayer = new Layer(true);
+
+	std::vector<Layer*> layers = std::vector<Layer*>{
+		mapLayer,
+		piecesLayer
+	};
+
+	Scene* scene = new Scene(layers);
+	Engine engine = Engine(scene);
 
 	engine.run();
 

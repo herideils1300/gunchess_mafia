@@ -5,8 +5,8 @@
 struct Map {
 protected:
 	//Protected values that are being accessed
-	Texture2D nonColTexture;
-	Texture2D colTexture;
+	Texture2D nonColTexture = Texture2D();
+	Texture2D colTexture = Texture2D();
 	std::string skeleton;
 	std::vector<std::string> layers = std::vector<std::string>();
 public:
@@ -15,5 +15,6 @@ public:
 	void setNonColTexture(Texture2D nonColTexture) { this->nonColTexture = nonColTexture; };
 	Texture2D getColTexture() { return this->colTexture; };
 	void setColTexture(Texture2D colTexture) { this->colTexture = colTexture; };
-	void setSkeleton(const char* skeleton) { this->skeleton = skeleton; };
+	void setSkeleton(std::string* skeleton) { this->skeleton = *skeleton; };
+	std::string getSkeleton() { return this->skeleton; };
 };

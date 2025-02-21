@@ -6,15 +6,16 @@
 class Engine
 {
 private:
-	Scene* scene = new Scene();
-	bool gameRunning = true;
+	Scene* scene;
+	bool engineRunning = true;
 	bool updateElements();
 	void drawElements();
 	void setup();
 	void loop();
 public:
 	Engine(Scene* scene);
-	Engine();
+	void endGame();
+	//Engine();
 	void run();
 };
 

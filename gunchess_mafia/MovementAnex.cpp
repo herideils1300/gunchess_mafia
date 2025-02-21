@@ -1,8 +1,9 @@
 #include "MovementAnex.h"
 #include <raylib.h>
 #include <math.h>
+#include <bit>
 
-bool MovementAnex::updateElementPosi(Character* character) {
+int MovementAnex::updateElementPosi(Character* character) {
 	Vector2 posi = character->getPosi();
 	switch (GetKeyPressed())
 	{

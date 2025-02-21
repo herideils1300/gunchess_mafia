@@ -132,25 +132,30 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Anex.h" />
-    <ClInclude Include="AnexType.h" />
+    <ClInclude Include="ActionType.h" />
     <ClInclude Include="Boss.h" />
     <ClInclude Include="Character.h" />
+    <ClInclude Include="CollisionLink.h" />
+    <ClInclude Include="CollisionMap.h" />
+    <ClInclude Include="Conditions.h" />
     <ClInclude Include="GameElement.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="GeneratingAnex.h" />
     <ClInclude Include="Layer.h" />
+    <ClInclude Include="Link.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="MovementAnex.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Rotation.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Shared.h" />
-    <ClInclude Include="TileLayer.h" />
     <ClInclude Include="TileMap.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Anex.cpp" />
     <ClCompile Include="Boss.cpp" />
+    <ClCompile Include="CollisionLink.cpp" />
+    <ClCompile Include="CollisionMap.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="GeneratingAnex.cpp" />
     <ClCompile Include="Layer.cpp" />
@@ -158,7 +163,6 @@
     <ClCompile Include="MovementAnex.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Shared.cpp" />
-    <ClCompile Include="TileLayer.cpp" />
     <ClCompile Include="TileMap.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -167,7 +171,9 @@
   <ItemGroup>
     <Image Include="..\..\assets\blue_boss.png" />
     <Image Include="..\..\assets\brown_boss.png" />
+    <Image Include="..\..\assets\collisionTest.png" />
     <Image Include="..\..\assets\green_boss.png" />
+    <Image Include="..\..\assets\nonCollisionTest.png" />
     <Image Include="..\..\assets\orange_boss.png" />
     <Image Include="..\..\assets\red_boss.png" />
     <Image Include="..\..\assets\skin_boss.png" />

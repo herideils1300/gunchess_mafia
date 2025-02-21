@@ -14,15 +14,17 @@ bool GeneratingAnex::generateTileMap(Map* tileMap, float cprob /* cprob is a val
 
 
 	// Populating the skeletonEdit with regards to width and height
-	for (int i = 0; i < width; i++) {
-		for (int j = 0; j < height; j++) {
+	for (int i = 0; i < height; i++) {
+		for (int j = 0; j < width; j++) {
 			float randNum = rand() % 10 * 0.1f;
 			skeletonEdit.push_back((randNum <= cprob) ? '@' : ' ');
-			if (i == width - 1) {
+			if (j == width - 1) {
 				skeletonEdit.push_back('\n');
 			}
 		}
 	}
+
+	tileMap->setSkeleton(&skeletonEdit);
 
 	return true;
 }

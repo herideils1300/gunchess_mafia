@@ -43,9 +43,6 @@
     <Filter Include="Header Files\Static">
       <UniqueIdentifier>{678072d3-b38b-4ea7-a6dd-909a0a1ddcb9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Static">
-      <UniqueIdentifier>{add7bb6d-a420-409e-8ddb-9299db1f83e8}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Resource Files\modifiables">
       <UniqueIdentifier>{8b0202b1-3312-45b2-9d01-39d0f7a6478f}</UniqueIdentifier>
     </Filter>
@@ -69,6 +66,21 @@
     </Filter>
     <Filter Include="Source Files\Structure">
       <UniqueIdentifier>{fda77406-9ba5-49dc-b2e6-1db175c3a65a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Elements\Maps">
+      <UniqueIdentifier>{90848f7d-7e98-4a90-a0a4-771215f1e63f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Links">
+      <UniqueIdentifier>{add7bb6d-a420-409e-8ddb-9299db1f83e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Elements\Maps">
+      <UniqueIdentifier>{3c790be7-e56f-45b0-a814-981cb0264bf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Links">
+      <UniqueIdentifier>{c3124938-146a-413b-b913-bf3f5f832491}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Links\Abstract">
+      <UniqueIdentifier>{ab4b682a-a715-4bc2-9ffb-33fb2bcb6a7d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -102,7 +114,7 @@
     <ClInclude Include="GeneratingAnex.h">
       <Filter>Header Files\Anexes</Filter>
     </ClInclude>
-    <ClInclude Include="AnexType.h">
+    <ClInclude Include="ActionType.h">
       <Filter>Header Files\Static</Filter>
     </ClInclude>
     <ClInclude Include="Map.h">
@@ -110,9 +122,6 @@
     </ClInclude>
     <ClInclude Include="Engine.h">
       <Filter>Header Files\Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="TileLayer.h">
-      <Filter>Header Files\Elements</Filter>
     </ClInclude>
     <ClInclude Include="Shared.h">
       <Filter>Header Files\Structure</Filter>
@@ -122,6 +131,18 @@
     </ClInclude>
     <ClInclude Include="Layer.h">
       <Filter>Header Files\Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionMap.h">
+      <Filter>Header Files\Elements\Maps</Filter>
+    </ClInclude>
+    <ClInclude Include="Link.h">
+      <Filter>Header Files\Links\Abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionLink.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Conditions.h">
+      <Filter>Header Files\Static</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -137,17 +158,11 @@
     <ClCompile Include="Anex.cpp">
       <Filter>Source Files\Anexes\Abstract</Filter>
     </ClCompile>
-    <ClCompile Include="TileMap.cpp">
-      <Filter>Source Files\Elements</Filter>
-    </ClCompile>
     <ClCompile Include="GeneratingAnex.cpp">
       <Filter>Source Files\Anexes</Filter>
     </ClCompile>
     <ClCompile Include="Engine.cpp">
       <Filter>Source Files\Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="TileLayer.cpp">
-      <Filter>Source Files\Elements</Filter>
     </ClCompile>
     <ClCompile Include="Shared.cpp">
       <Filter>Source Files\Structure</Filter>
@@ -157,6 +172,15 @@
     </ClCompile>
     <ClCompile Include="Layer.cpp">
       <Filter>Source Files\Structure</Filter>
+    </ClCompile>
+    <ClCompile Include="TileMap.cpp">
+      <Filter>Source Files\Elements\Maps</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionMap.cpp">
+      <Filter>Source Files\Elements\Maps</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionLink.cpp">
+      <Filter>Source Files\Links</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -184,6 +208,12 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="..\..\assets\white_boss.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\assets\collisionTest.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\assets\nonCollisionTest.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

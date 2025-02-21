@@ -5,3 +5,8 @@ void Anex::lock(int providedPriority) {
 		this->locked = true;
 	}
 }
+
+void Anex::cancel()
+{
+	this->canceled = true;
+}

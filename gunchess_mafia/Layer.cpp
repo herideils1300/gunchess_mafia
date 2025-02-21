@@ -6,9 +6,15 @@ Layer::Layer(std::vector<GameElement*> ges, bool dynamic)
 	this->dynamic = dynamic;
 }
 
-void Layer::operator+(GameElement* element)
+Layer::Layer(bool dynamic) {
+	this->dynamic = dynamic;
+	this->gameElements = std::vector<GameElement*>();
+}
+
+Layer* Layer::operator+=(GameElement* element)
 {
 	this->gameElements.push_back(element);
+	return this;
 }
 
 std::vector<GameElement*> Layer::giveAllElements()

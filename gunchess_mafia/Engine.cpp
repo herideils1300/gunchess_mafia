@@ -5,7 +5,7 @@ Engine::Engine(Scene* scene){
 	this->scene = scene;
 }
 
-Engine::Engine() {}
+//Engine::Engine() {}
 
 bool Engine::updateElements()
 {
@@ -22,8 +22,8 @@ void Engine::drawElements() {
 	
 	ClearBackground(Color{ 0, 0, 0, 0 });
 	BeginDrawing();
-	BeginMode2D(this->camera);
-	for (GameElement* element : this->elements) {
+	BeginMode2D(this->scene->bringCamera());
+	for (GameElement* element : this->scene->bringAll()) {
 		element->draw();
 	}
 	EndMode2D();
@@ -32,12 +32,13 @@ void Engine::drawElements() {
 }
 
 void Engine::endGame() {
-	this->gameRunning = false;
+	this->engineRunning = false;
 	CloseWindow();
+	return;
 }
 
 void Engine::loop() {
-	while (this->gameRunning) {
+	while (this->engineRunning) {
 		this->updateElements();
 		this->drawElements();
 		if (WindowShouldClose()) {
@@ -48,16 +49,11 @@ void Engine::loop() {
 	this->endGame();
 }
 
-
 void Engine::setup() {
 	int width = 1024;
 	int height = 720;
-	this->camera.target = Vector2{ 0,0 };
-	this->camera.offset = Vector2{ 0,0 };
-	this->camera.rotation = 0.0f;
-	this->camera.zoom = 1.0f;
 	InitWindow(width, height, "Gunchess");
-	for (GameElement* a : this->elements) {
+	for (GameElement* a : this->scene->bringAll()) {
 		a->init();
 	}
 }
