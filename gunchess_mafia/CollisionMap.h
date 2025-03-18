@@ -9,6 +9,8 @@ class CollisionMap : public GameElement, public Map
 {
 private:
 	std::vector<std::pair<int, int>> collisionCoords;
+	template<typename T>
+	bool isThingCollided(T* object);
 public:
 	CollisionMap();
 	std::vector<std::pair<int, int>> getCollisions();

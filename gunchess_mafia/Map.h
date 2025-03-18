@@ -8,7 +8,6 @@ protected:
 	Texture2D nonColTexture = Texture2D();
 	Texture2D colTexture = Texture2D();
 	std::string skeleton;
-	std::vector<std::string> layers = std::vector<std::string>();
 public:
 	//Getters and setters for the sturcture values
 	Texture2D getNonColTexture() { return this->nonColTexture; };

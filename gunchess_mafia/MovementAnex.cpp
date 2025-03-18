@@ -33,8 +33,14 @@ int MovementAnex::updateElementPosi(Character* character) {
 	return true;
 }
 
-bool MovementAnex::execute(Character* character) {
-	return updateElementPosi(character);
+int MovementAnex::execute(Character* character) {
+	
+	if (this->locked)
+		return 0;
+	else if (this->canceled)
+		return -1;
+	
+	return this->updateElementPosi(character);
 }
 
 

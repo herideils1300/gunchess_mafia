@@ -6,7 +6,7 @@
 class MovementAnex : public Anex
 {
 private:
-	bool updateElementPosi(Character* character);
+	int updateElementPosi(Character* character);
 public:
 	MovementAnex() {};
 	int execute(Character* character) override;

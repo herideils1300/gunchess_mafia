@@ -1,5 +1,9 @@
 #pragma once
 #include <vector>
-std::vector<bool*> conditions = {
+#include <functional>
+#include "Layer.h"
 
-}
+
+std::vector<std::function<void(Layer*)>> conditions = std::vector<std::function<void(Layer*)>>{
+	[]() {},
+};

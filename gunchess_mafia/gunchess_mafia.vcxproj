@@ -134,15 +134,14 @@
     <ClInclude Include="Anex.h" />
     <ClInclude Include="ActionType.h" />
     <ClInclude Include="Boss.h" />
+    <ClInclude Include="Bridge.h" />
     <ClInclude Include="Character.h" />
-    <ClInclude Include="CollisionLink.h" />
+    <ClInclude Include="CollideCharacterBridge.h" />
     <ClInclude Include="CollisionMap.h" />
-    <ClInclude Include="Conditions.h" />
     <ClInclude Include="GameElement.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="GeneratingAnex.h" />
     <ClInclude Include="Layer.h" />
-    <ClInclude Include="Link.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="MovementAnex.h" />
     <ClInclude Include="resource.h" />
@@ -154,7 +153,8 @@
   <ItemGroup>
     <ClCompile Include="Anex.cpp" />
     <ClCompile Include="Boss.cpp" />
-    <ClCompile Include="CollisionLink.cpp" />
+    <ClCompile Include="Bridge.cpp" />
+    <ClCompile Include="CollideCharacterBridge.cpp" />
     <ClCompile Include="CollisionMap.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="GeneratingAnex.cpp" />

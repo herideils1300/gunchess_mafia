@@ -1,5 +1,17 @@
 #include "CollisionMap.h"
+#include "Character.h"
 #include <string>
+#include "Bridge.h"
+
+template <typename T>
+bool CollisionMap::isThingCollided(T* object)
+{
+	Character* cPointer = object;
+
+	for (std::pair<int, int> coord : this->collisionCoords) {
+		if(coord.first == )
+	}
+}
 
 CollisionMap::CollisionMap()
 {
@@ -22,6 +34,7 @@ void CollisionMap::init()
 	{
 		if (skeleton[index] == '@') {
 			this->collisionCoords.push_back({x, y});
+			x++;
 		}
 		else if (skeleton[index] == '\n') {
 			x = 0;
@@ -32,6 +45,8 @@ void CollisionMap::init()
 		}
 		index++;
 	}
+
+	
 }
 
 

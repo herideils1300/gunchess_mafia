@@ -17,5 +17,6 @@ public:
 	void change(Scene newScene);
 	Camera2D bringCamera();
 	std::vector<GameElement*> bringAll();
+	Shared* getSharedParams();
 };
 

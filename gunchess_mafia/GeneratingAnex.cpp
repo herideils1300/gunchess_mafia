@@ -29,9 +29,9 @@ bool GeneratingAnex::generateTileMap(Map* tileMap, float cprob /* cprob is a val
 	return true;
 }
 
-bool GeneratingAnex::execute(Map* element)
+int GeneratingAnex::execute(Map* element)
 {
-	//Calling the generate function (returns true when completed)
-	return generateTileMap(element, 0.2);
+	if(!this->locked && !this->canceled)
+		return generateTileMap(element, 0.2);
 }
 

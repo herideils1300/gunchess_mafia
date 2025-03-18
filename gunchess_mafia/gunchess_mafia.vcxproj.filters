@@ -70,17 +70,23 @@
     <Filter Include="Source Files\Elements\Maps">
       <UniqueIdentifier>{90848f7d-7e98-4a90-a0a4-771215f1e63f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Links">
-      <UniqueIdentifier>{add7bb6d-a420-409e-8ddb-9299db1f83e8}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Elements\Maps">
       <UniqueIdentifier>{3c790be7-e56f-45b0-a814-981cb0264bf6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Links">
-      <UniqueIdentifier>{c3124938-146a-413b-b913-bf3f5f832491}</UniqueIdentifier>
+    <Filter Include="Header Files\Static\Enums">
+      <UniqueIdentifier>{850aa853-0c0a-48be-9cd3-79a8a9b32efc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Links\Abstract">
-      <UniqueIdentifier>{ab4b682a-a715-4bc2-9ffb-33fb2bcb6a7d}</UniqueIdentifier>
+    <Filter Include="Header Files\Bridges">
+      <UniqueIdentifier>{25337ee7-a81d-4662-8bf7-c945ca67770c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Bridges">
+      <UniqueIdentifier>{4aa6df34-8122-4efe-91e2-bbfe8a220f55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Bridges\Abstract">
+      <UniqueIdentifier>{9f788fd5-e1be-40fb-a2bf-9ea3baa17495}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Bridges\Abstract">
+      <UniqueIdentifier>{4bb3540f-fb70-41f5-92c2-cd00f3b5de5b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -92,9 +98,6 @@
     </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Rotation.h">
-      <Filter>Header Files\Static</Filter>
     </ClInclude>
     <ClInclude Include="MovementAnex.h">
       <Filter>Header Files\Anexes</Filter>
@@ -114,9 +117,6 @@
     <ClInclude Include="GeneratingAnex.h">
       <Filter>Header Files\Anexes</Filter>
     </ClInclude>
-    <ClInclude Include="ActionType.h">
-      <Filter>Header Files\Static</Filter>
-    </ClInclude>
     <ClInclude Include="Map.h">
       <Filter>Header Files\Elements\Abstract</Filter>
     </ClInclude>
@@ -135,14 +135,17 @@
     <ClInclude Include="CollisionMap.h">
       <Filter>Header Files\Elements\Maps</Filter>
     </ClInclude>
-    <ClInclude Include="Link.h">
-      <Filter>Header Files\Links\Abstract</Filter>
+    <ClInclude Include="ActionType.h">
+      <Filter>Header Files\Static\Enums</Filter>
     </ClInclude>
-    <ClInclude Include="CollisionLink.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Rotation.h">
+      <Filter>Header Files\Static\Enums</Filter>
     </ClInclude>
-    <ClInclude Include="Conditions.h">
-      <Filter>Header Files\Static</Filter>
+    <ClInclude Include="Bridge.h">
+      <Filter>Header Files\Bridges\Abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="CollideCharacterBridge.h">
+      <Filter>Header Files\Bridges</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -179,8 +182,11 @@
     <ClCompile Include="CollisionMap.cpp">
       <Filter>Source Files\Elements\Maps</Filter>
     </ClCompile>
-    <ClCompile Include="CollisionLink.cpp">
-      <Filter>Source Files\Links</Filter>
+    <ClCompile Include="Bridge.cpp">
+      <Filter>Source Files\Bridges\Abstract</Filter>
+    </ClCompile>
+    <ClCompile Include="CollideCharacterBridge.cpp">
+      <Filter>Source Files\Bridges</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

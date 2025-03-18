@@ -11,6 +11,8 @@ Scene::Scene(std::vector<Layer*> layers)
 	this->camera.rotation = 0.0f;
 	this->camera.target = Vector2{ 0,0 };
 	this->camera.offset = Vector2{ 0,0 };
+
+
 }
 
 void Scene::addLayer(Layer* layer) {
@@ -43,4 +45,9 @@ std::vector<GameElement*> Scene::bringAll()
 	}
 
 	return gameElements;
+}
+
+Shared* Scene::getSharedParams()
+{
+	return this->shraedParams;
 }

@@ -11,6 +11,9 @@ bool Engine::updateElements()
 {
 	bool finished = false;
 
+	Shared* shared = this->scene->getSharedParams();
+	shared->executeConditionals();
+
 	for (GameElement* element : this->scene->bringAll()) {
 		finished &= element->update();
 	}
