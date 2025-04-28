@@ -33,13 +33,13 @@ Camera2D Scene::bringCamera()
 {
 	return this->camera;
 }
-
-std::vector<GameElement*> Scene::bringAll()
+template <class T>
+std::vector<T*> Scene::bringAll()
 {
-	std::vector<GameElement*> gameElements = std::vector<GameElement*>();
+	std::vector<T*> gameElements = std::vector<T*>();
 
 	for (Layer* layer : this->layers) {
-		for (GameElement* element : layer->giveAllElements()) {
+		for (GameElement* element : layer->giveAllType<T>()) {
 			gameElements.push_back(element);
 		}
 	}

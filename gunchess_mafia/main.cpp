@@ -4,10 +4,9 @@
 #include "Boss.h"
 #include "TileMap.h"
 #include "Scene.h"
+#include "Continual.h"
+#include "CollisionContinual.h"
 int main() {
-	//Redoing the main scene...
-	
-
 	std::vector<GameElement*> mapElements = std::vector<GameElement*>{
 		new TileMap()
 	};

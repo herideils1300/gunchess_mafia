@@ -12,7 +12,7 @@ public:
 	Layer* operator+=(GameElement* element);
 	Layer* operator--();
 	std::vector<GameElement*> giveAllElements();
-	template<typename T>
+	template<class T>
 	std::vector<T*> giveAllType();
 	void setDynamic(bool isDyanmic);
 	bool getDynamic();

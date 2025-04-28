@@ -16,7 +16,8 @@ public:
 	void addLayer(std::vector<Layer*> gameElements);
 	void change(Scene newScene);
 	Camera2D bringCamera();
-	std::vector<GameElement*> bringAll();
+	template <class T>
+	std::vector<T*> bringAll();
 	Shared* getSharedParams();
 };
 

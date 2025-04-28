@@ -15,23 +15,7 @@ bool isCollided(std::pair<int, int> posIP, std::vector<std::pair<int, int>> coll
 	return false;
 }
 
-void CollideCharacterBridge::condition(Character* character, Layer executorLayer)
+void CollideCharacterBridge::determineCondition(Character* pl, CollisionMap el)
 {
-	std::vector<Character*> chars = providerLayer.giveAllType<Character>();
-	std::vector<std::pair<int, int>> colls = executorLayer.giveAllType<CollisionMap>().front()->getCollisions();
-
-
-
-	for (Character* character : chars) {
-		if(character->getPosi().x == )
-	}
-
-
-}
-
-void CollideCharacterBridge::assertTrue(Anex* anex)
-{
-	if (this->conditionVar) {
-		anex->cancel();
-	}
+	this->conditionVar = isCollided({ pl->getPosi().x, pl->getPosi().y }, el.getCollisions());
 }

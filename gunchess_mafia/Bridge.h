@@ -1,13 +1,6 @@
 #pragma once
-#include <any>
-#include "Anex.h"
-#include "GameElement.h"
+// Reseting bridge soon... For now we have continuals.
 class Bridge
 {
-protected:
-	bool conditionVar = false;
-public:
-	virtual void assertFalse(Anex* anex) {};
-	virtual void assertTrue(Anex* anex) {};
 };
 

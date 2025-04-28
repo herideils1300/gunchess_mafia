@@ -2,12 +2,11 @@
 #include "Bridge.h"
 #include "Anex.h"
 #include "Layer.h"
+#include "CollisionMap.h"
 
 class CollideCharacterBridge : public Bridge
 {
 protected:
-	void condition(Character* pl, Layer el);
-public:
-	void assertTrue(Anex* anex) override;
+	void determineCondition(Character* pl, CollisionMap el);
 };
 

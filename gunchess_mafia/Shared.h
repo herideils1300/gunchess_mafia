@@ -3,19 +3,17 @@
 #include <map>
 #include <tuple>
 #include "Layer.h"
+#include "Bridge.h"
 #include <functional>
 #include <any>
 class Shared
 {
 private:
-	std::map<const char*, std::any> values = std::map<const char*, std::any>();
-	std::vector<std::function<void(Layer*)>> cancelConditionals = std::vector<std::function<void(Layer*)>>();
+	std::map<std::string, Bridge*> bridges = std::map<std::string, Bridge*>();
 public:
-	Shared* operator*=(std::function<void(Layer*)> conditional);
-	Shared* operator*=(std::vector<std::function<void(Layer*)>> conditionals);
-	Shared* operator+=(std::pair<const char*, std::any> tupleValue);
-	std::any operator[](const char* paramName);
-	std::vector<std::function<void(Layer*)>> getConditionals();
+	Shared* operator+=(Bridge* bridge);
+	std::map<std::string, Bridge*> getBridges() { return this->bridges; };
+	void assertBridges();
 
 };
 

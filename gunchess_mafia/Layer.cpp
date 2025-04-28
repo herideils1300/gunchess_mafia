@@ -1,5 +1,6 @@
 #include "Layer.h"
 #include "Character.h"
+#include "GameElement.h"
 #include <typeinfo>
 Layer::Layer(std::vector<GameElement*> ges, bool dynamic)
 {
@@ -23,12 +24,12 @@ std::vector<GameElement*> Layer::giveAllElements()
 	return this->gameElements;
 }
 
-template<typename T>
+template<class T>
 std::vector<T*> Layer::giveAllType()
 {
 	std::vector<T*> chars = std::vector<T*>();
 	for (GameElement* character : this->gameElements) {
-		if (typename(character) == type) {
+		if (typeid(character) == typeid(T)) {
 			chars.push_back(character);
 		}
 	}

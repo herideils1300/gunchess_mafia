@@ -11,13 +11,11 @@ bool Engine::updateElements()
 {
 	bool finished = false;
 
-	Shared* shared = this->scene->getSharedParams();
-	shared->executeConditionals();
-
-	for (GameElement* element : this->scene->bringAll()) {
+	//Forward update
+	for (GameElement* element : this->scene->bringAll<GameElement>()) {
 		finished &= element->update();
 	}
-
+	//Backward (block or undo) update
 	return finished;
 }
 
@@ -26,7 +24,7 @@ void Engine::drawElements() {
 	ClearBackground(Color{ 0, 0, 0, 0 });
 	BeginDrawing();
 	BeginMode2D(this->scene->bringCamera());
-	for (GameElement* element : this->scene->bringAll()) {
+	for (GameElement* element : this->scene->bringAll<GameElement>()) {
 		element->draw();
 	}
 	EndMode2D();
@@ -56,7 +54,7 @@ void Engine::setup() {
 	int width = 1024;
 	int height = 720;
 	InitWindow(width, height, "Gunchess");
-	for (GameElement* a : this->scene->bringAll()) {
+	for (GameElement* a : this->scene->bringAll<GameElement>()) {
 		a->init();
 	}
 }

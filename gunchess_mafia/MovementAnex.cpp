@@ -5,6 +5,8 @@
 
 int MovementAnex::updateElementPosi(Character* character) {
 	Vector2 posi = character->getPosi();
+	this->lastElementPosi = posi;
+
 	switch (GetKeyPressed())
 	{
 	case KEY_A:
@@ -30,7 +32,7 @@ int MovementAnex::updateElementPosi(Character* character) {
 	}
 	character->setPosi(posi);
 
-	return true;
+	return 1;
 }
 
 int MovementAnex::execute(Character* character) {

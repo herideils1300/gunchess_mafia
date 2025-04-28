@@ -24,7 +24,7 @@ bool GeneratingAnex::generateTileMap(Map* tileMap, float cprob /* cprob is a val
 		}
 	}
 
-	tileMap->setSkeleton(&skeletonEdit);
+	tileMap->mapBlocks(&skeletonEdit);
 
 	return true;
 }

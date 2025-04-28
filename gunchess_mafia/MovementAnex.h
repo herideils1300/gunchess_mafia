@@ -6,6 +6,7 @@
 class MovementAnex : public Anex
 {
 private:
+	Vector2 lastElementPosi = { 0,0 };
 	int updateElementPosi(Character* character);
 public:
 	MovementAnex() {};

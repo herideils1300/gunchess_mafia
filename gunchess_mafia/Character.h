@@ -5,6 +5,7 @@ struct Character
 {
 protected:
 	Vector2 posi = Vector2{ 0,0 };
+	Vector2 prevPosi = Vector2{ 0,0 };
 	Rotation rotation = Rotation::Left;
 	int health = 1;
 	bool isPlayer = false;
@@ -20,4 +21,5 @@ public:
 	void setIsAlive(bool isAlive) { this->isAlive = isAlive; };
 	void rotateLeft() { int rotInt = (int)this->rotation; rotInt++; this->rotation = (Rotation)rotInt; };
 	void rotateRight() { int rotInt = (int)this->rotation; rotInt--; this->rotation = (Rotation)rotInt; };
+	void undoMovement();
 };
